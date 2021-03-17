@@ -1,3 +1,4 @@
+import java.util.Arrays
 fun main(args:Array<String>){
 
     var age:Int =23
@@ -66,4 +67,70 @@ fun main(args:Array<String>){
     println("The value of a is ${a}")
 
     println("The length of b is ${b.length} ")
+
+    var messenger:String="Ssali JOnathan"
+
+    println("${messenger} is the messenger")
+
+//    /arrays
+    var names: Array<String> = arrayOf("names","names","names")
+
+    for (name in names){
+        println(name)
+    }
+
+    var numbers: Array <Int> = arrayOf(1,2,3,4,5,6,7,8,9,1,0)
+
+    for (number in numbers){
+        println(number)
+    }
+
+    //primitive arrays
+    var f :ByteArray= byteArrayOf(1,2,3)
+    var g :ShortArray= shortArrayOf(1,2,3)
+    var c :IntArray = intArrayOf(1,23,45,56)
+    var d : DoubleArray = doubleArrayOf(1.2,3.4)
+    var e :CharArray = charArrayOf('a','f','e')
+
+    for (el in f){
+        println(el)
+    }
+
+    //array of nulls
+    var arrayOfNulls= arrayOfNulls<Int>(5)
+
+    for (el in arrayOfNulls){
+        println(el)
+    }
+
+    //how to create a function using a factory
+    var squares= Array(5,{i: Int -> i *i  })
+
+    for (el in squares){
+        println(el)
+    }
+
+    var cubes =Array(10,{i:Int -> i * i * i})
+
+    println("\n Ten cubes ")
+
+    for (el in cubes){
+        println(el)
+    }
+
+    //print an array
+    var friends:Array<String> = arrayOf("Perez","Jemo","Bazil")
+
+    for(name in friends){
+        println("${name} is my friend")
+    }
+
+    var arr: Array<String> = arrayOf("we","we","we")
+
+    println(Arrays.toString(arr))
+
+    for (index in arr.indices){
+        println(arr[index])
+    }
+
 }
